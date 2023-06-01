@@ -7,17 +7,17 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 module.exports = {
   title: 'Crypto',
-  tagline: 'Crypto',
+  tagline: 'My Crypto Project',
   favicon: 'img/favicon-32x32.png',
   url: 'https://crypto.askhab.com',
   baseUrl: '/',
-  organizationName: 'askhab', // Usually your GitHub org/user name.
+  organizationName: 'askhab-com', // Usually your GitHub org/user name.
   projectName: 'crypto', // Usually your repo name.
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   i18n: {
     defaultLocale: 'ru',
-    locales: ['en', 'ru'],
+    locales: ['ru'],
   },
 
   presets: [
@@ -59,62 +59,32 @@ module.exports = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            type: 'dropdown',
+            label: 'Сервисы',
             position: 'left',
-            label: 'Tutorial',
+            items: [
+              {
+                label: 'Спред',
+                to: 'spread',
+              }
+            ]
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/askhab-com/crypto',
-            label: 'GitHub',
-            position: 'right',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'Tutorial',
+          // },
+          // {to: '/blog', label: 'Blog', position: 'left'},
+          // {
+          //   href: 'https://github.com/askhab-com/crypto',
+          //   label: 'GitHub',
+          //   position: 'right',
+          // },
         ],
       },
       footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
+        style: 'light',
         copyright: `Copyright © ${new Date().getFullYear()} Crypto made Askhab with ♡.`,
       },
       prism: {
