@@ -69,6 +69,7 @@ module.exports = {
               }
             ]
           },
+          //
           // {
           //   type: 'docSidebar',
           //   sidebarId: 'tutorialSidebar',
